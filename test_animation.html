@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Animation</title>
+  <style>
+    /* CSS for styling the text */
+    .text-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .animated-text {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="text-container">
+  <h1 class="animated-text" id="animatedText">Animate me!</h1>
+</div>
+
+<script>
+  // JavaScript for animating the text
+  const animatedText = document.getElementById('animatedText');
+  let startTime = null;
+
+  function animateText(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+
+    // Example animation: move text up and down
+    const offsetY = Math.sin(elapsed / 1000) * 10; // Adjust the multiplier for different speed and range
+    animatedText.style.transform = `translateY(${offsetY}px)`;
+
+    requestAnimationFrame(animateText);
+  }
+
+  // Start the animation loop
+  requestAnimationFrame(animateText);
+</script>
+
+</body>
+</html>

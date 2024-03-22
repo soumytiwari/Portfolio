@@ -1,0 +1,45 @@
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+<br><br>
+-----------------------------------------------
+
+## Developer site
+>   npm create vite@latest ./ -- --template react
+<br>
+
+>   npm install -D tailwindcss
+<br>
+
+>   npx tailwindcss init
+<br>
+
+>   npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom
+- --legacy-peer-deps: some of the react packages use older version of react, specially 'react-tilt' so we have to install this to be able to use older versions too.
+- @react-three/fiber: this is a react based 3js library that's going toallow us to create 3js code in a react fashion
+- maath: for math utility function. When working with 3js there's going to be a lot of geometry 
+- react-tilt: it's going to provide cool animations when howering over our cards
+- react-vertical-timeline-component: for the experience similar to the one on linkedin 
+- react-router-dom: for routing
+<br>
+
+> npm run dev
+
+
+
+
+---------------------------------------------
+- Three.js: A powerful 3D graphics library for rendering and animating 3D models
+- React Three Fiber: Library for ThreeJS in React for creating 3D graphics with threejs in react.
+- tailwindcss: A popular utility-first CSS styling framework.
+- Framer Motion: to bring life in your website with animation in react.
+---------------------------------------------
+- Load, Create, Customize 3D Models and Geometries with various lights.
+- Understand the 3D world with Camera and 3D Positioning of an object in the sapce including camera.
+- Making code Reusable and Scalable using "Higher Order Components" and "Industry-standard best practices(like sending email through a form under website with emailjs, and we'll ensure responsiveness accross all the devices using suspense and pre-load)"
