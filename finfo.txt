@@ -31,7 +31,8 @@ Currently, two official plugins are available:
 
 > npm run dev
 
-
+- npm install --legacy-peer-deps -D postcss autoprefixer: because tailwind styles were not being applied in vite react this time
+- npx tailwindcss init -p: next to above
 
 
 ---------------------------------------------
