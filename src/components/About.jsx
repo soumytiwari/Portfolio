@@ -6,6 +6,8 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
+import { SectionWrapper } from "../hoc";
+
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -41,7 +43,7 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="mt-20 pt-20">
+      <motion.div variants={textVariant()} className="mt-7 pt-12">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
@@ -60,11 +62,11 @@ const About = () => {
           return <ServiceCard key={service.title} index={index} {...service} />;
         })}
       </div>
-      About
     </>
   );
 };
 
-export default About;
+// first we pass the component, and the the id.. which is 'about' here
+export default SectionWrapper(About, 'about');
 
 // we'll create the space ' pl-7 pr-7 ' these for all the components and its elements using something called 'higher order component'
