@@ -1,5 +1,5 @@
 // audio
-var audio = new Audio('16113__steffcaffrey__cats/262307__steffcaffrey__cat-happy-purrtwitter2.wav');
+var audio = new Audio('/assets/16113__steffcaffrey__cats/262307__steffcaffrey__cat-happy-purrtwitter2.wav');
 
 function playMusic() {
     audio.play();
